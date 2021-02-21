@@ -12,28 +12,6 @@
       }
     },
     {
-      "id": 2,
-      "name": "ng-nl",
-      "date": "4/15/2037",
-      "time": "9am",
-      "location": {
-        "address": "127 DT ",
-        "city": "Amsterdam",
-        "country": "NL"
-      }
-    },
-    {
-      "id": 3,
-      "name": "ng-conf 2037",
-      "date": "4/15/2037",
-      "time": "9am",
-      "location": {
-        "address": "The Palatial America Hotel",
-        "city": "Salt Lake City",
-        "country": "USA"
-      }
-    },
-    {
       "id": 4,
       "name": "UN Angular Summit",
       "date": "6/10/2037",
@@ -46,6 +24,28 @@
     },
     {
       "id": 5,
+      "name": "Németh Ádám",
+      "date": "2/26/2036",
+      "time": "11pm",
+      "location": {
+        "address": "1 London 01",
+        "city": "London ",
+        "country": "ENGLAND"
+      }
+    },
+    {
+      "id": 6,
+      "name": "Németh Ádám",
+      "date": "2/26/2036",
+      "time": "11pm",
+      "location": {
+        "address": "1 London 01",
+        "city": "Budapest",
+        "country": "MAGYARORSZAG"
+      }
+    },
+    {
+      "id": 7,
       "name": "Németh Ádám",
       "date": "2/26/2036",
       "time": "11pm",

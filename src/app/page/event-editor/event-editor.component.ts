@@ -19,6 +19,8 @@ export class EventEditorComponent implements OnInit {
     switchMap(params => this.eventService.get(params.id))
   );
 
+  updating: boolean = false;
+
   constructor(
     private activatedRoute: ActivatedRoute,
     private eventService: EventService,
@@ -28,6 +30,7 @@ export class EventEditorComponent implements OnInit {
   ngOnInit(): void { }
 
   onUpdate(form: NgForm, event: Event): void {
+    this.updating = true;
     if (event.id === 0) {
       this.eventService.create(event).subscribe(
         ev => this.router.navigate([""])
@@ -37,6 +40,5 @@ export class EventEditorComponent implements OnInit {
         ev => this.router.navigate([''])
       );
   }
-
 
 }

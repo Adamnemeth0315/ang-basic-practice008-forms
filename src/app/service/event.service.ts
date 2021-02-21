@@ -8,7 +8,7 @@ import { Event } from '../model/event';
 })
 export class EventService {
 
-  eventUrl = "http://localhost:3000/list"
+  eventUrl = "http://localhost:3000/list";
 
   private list: Event[] = [
     {
@@ -49,6 +49,10 @@ export class EventService {
     this.list$.next(this.list);
   }
 
+  /* getAll(): Observable<Event[]> {
+    return this.http.get<Event[]>(this.eventUrl);
+  } */
+
   get(id: number): Observable<Event> {
     id = typeof id === 'string' ? parseInt(id, 10) : id;
     const ev: Event | undefined = this.list.find(item => item.id === id);
@@ -58,6 +62,10 @@ export class EventService {
 
     return of(new Event());
   }
+
+  /*  get(event: Event): Observable<Event> {
+     return this.http.get<Event>(`${this.eventUrl}/${event.id}`);
+   } */
 
   /* create(event: Event): Observable<any> {
     return this.http.post<Observable<any>>(this.eventUrl, event);
@@ -86,5 +94,13 @@ export class EventService {
     this.getAll();
     return this.list;
   }
+
+  /* update(event: Event): Observable<Event> {
+    return this.http.patch<Event>(`${this.eventUrl}/${event.id}`, event);
+  }
+
+  remove(event: Event): Observable<Event> {
+    return this.http.delete<Event>(`${this.eventUrl}/${event.id}`);
+  } */
 
 }

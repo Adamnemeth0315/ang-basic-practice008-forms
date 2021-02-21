@@ -12,7 +12,7 @@ import { NgForm } from '@angular/forms';
 export class EventsListComponent implements OnInit {
 
   eventList: BehaviorSubject<Event[]> = this.eventService.list$;
-  testEvent: Observable<Event> = this.eventService.get(1);
+  /* testEvent: Observable<Event> = this.eventService.get(2); */
 
   constructor(
     private eventService: EventService,

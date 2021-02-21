@@ -50,8 +50,9 @@
       </div>
       <div class="btn-group">
       </div>
-      <button [disabled]="eventForm.invalid" type="submit" class="btn btn-primary btn-block btn-lg">
-        <i class="fa fa-save"></i>
+      <button [disabled]="eventForm.invalid || updating" type="submit" class="btn btn-primary btn-block btn-lg">
+        <i *ngIf="!updating" class="fa fa-save"></i>
+        <i *ngIf="updating" class="fa fa-refresh"></i>
       </button>
     </form>
   </div>
